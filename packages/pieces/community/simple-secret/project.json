@@ -1,0 +1,38 @@
+{
+  "name": "pieces-simple-secret",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/pieces/community/simple-secret/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/packages/pieces/community/simple-secret",
+        "tsConfig": "packages/pieces/community/simple-secret/tsconfig.lib.json",
+        "packageJson": "packages/pieces/community/simple-secret/package.json",
+        "main": "packages/pieces/community/simple-secret/src/index.ts",
+        "assets": [
+          "packages/pieces/community/simple-secret/*.md"
+        ],
+        "buildableProjectDepsInPackageJsonType": "dependencies",
+        "updateBuildableProjectDepsInPackageJson": true
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs pieces-simple-secret {args.ver} {args.tag}",
+      "dependsOn": [
+        "build"
+      ]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ]
+    }
+  },
+  "tags": []
+}

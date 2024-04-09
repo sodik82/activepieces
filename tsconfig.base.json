@@ -628,6 +628,9 @@
         "packages/ui/feature-templates/src/index.ts"
       ],
       "@ee/*": ["packages/ee/*"],
+      "act-piece-simple-secret": [
+        "packages/pieces/community/simple-secret/src/index.ts"
+      ],
       "piece-tvdb": ["packages/pieces/community/tvdb/src/index.ts"],
       "server-worker": ["packages/server/worker/src/index.ts"],
       "ui-feature-flow-builder": [
