@@ -1,4 +1,5 @@
 import { createPiece, PieceAuth } from '@activepieces/pieces-framework';
+import { getSecret } from './lib/actions/get-secret';
 
 export const simpleSecretAuth = PieceAuth.SecretText({
   displayName: 'Your secret text',
@@ -11,6 +12,6 @@ export const simpleSecret = createPiece({
   minimumSupportedRelease: '0.20.0',
   logoUrl: 'https://cdn.activepieces.com/pieces/simple-secret.png',
   authors: [],
-  actions: [],
+  actions: [getSecret],
   triggers: [],
 });

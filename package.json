@@ -13,7 +13,7 @@
     "dev:frontend": "cross-env-shell FORCE_COLOR=true concurrently -n \"GUI,API,ENG\" -c \"bgBlue.bold,bgGreen.bold,bgRed.bold\" \"npm:serve:frontend\" \"npm:serve:backend\" \"npm:serve:engine\"",
     "start": "npm i && npm run dev",
     "secret": "nx build pieces-simple-secret",
-    "secret:publish": "nx run pieces-simple-secret:publish --args=\"--ver=0.1.0 --tag=beta\"",
+    "secret:publish": "nx run pieces-simple-secret:publish --args=\"--ver=0.1.1\"",
     "cli": "npx ts-node packages/cli/src/index.ts",
     "create-piece": "npx ts-node packages/cli/src/index.ts pieces create",
     "create-action": "npx ts-node packages/cli/src/index.ts actions create",
